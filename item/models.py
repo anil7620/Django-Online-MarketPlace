@@ -4,7 +4,7 @@ from django.urls import reverse
 
 # Create your models here.
 # Create your models here.
-class Catergory(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     # image = models.ImageField(upload_to='category')
@@ -18,7 +18,7 @@ class Catergory(models.Model):
         return self.name
     
 class Item(models.Model):
-    catergory = models.ForeignKey(Catergory, related_name='items', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='items', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
