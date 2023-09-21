@@ -21,9 +21,8 @@ from django.urls import path
 from django.urls.conf import include
 from core.views import index , contact, terms, about, policy
 urlpatterns = [
-    path("", index, name="index"),
+    path("", include("core.urls")),
     path("items/", include("item.urls")),
-    path("contact/", contact, name="contact"),
     path("terms/", terms, name="terms"),
     path("about/", about, name="about"),
     path("policy/", policy, name="policy"),
