@@ -23,6 +23,7 @@ from core.views import index , contact, terms, about, policy
 urlpatterns = [
     path("", include("core.urls")),
     path("items/", include("item.urls")),
+    path("dashboard/", include("dashboard.urls")),
     path("terms/", terms, name="terms"),
     path("about/", about, name="about"),
     path("policy/", policy, name="policy"),
