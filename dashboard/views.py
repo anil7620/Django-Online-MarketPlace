@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from item.models import Item, Category
 
@@ -8,3 +8,5 @@ def index(request):
     return render(request, 'dashboard/index.html', {
         'items': items,
     })
+
+

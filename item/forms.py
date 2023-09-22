@@ -7,7 +7,7 @@ INPUT_CLASS = "w-full py-4 px-6 roundex-xl"
 class NewItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ("name", "description", "price", "category", "image")
+        fields = ("name", "description", "price", "category", "image", "is_sold")
         widgets = {
 
             "category": forms.Select(attrs={"class": INPUT_CLASS, "placeholder": "Item Category"}),
